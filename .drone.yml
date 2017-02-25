@@ -11,6 +11,7 @@ pipeline:
       - python testing.py
 
   telegram:
+    debug: true
     image: appleboy/drone-telegram
     token: 225637796:AAGy9ibfMEycDjKS-A9odaE4oZSyROdjN48
-    to: @jhoffman
+    to: jhoffman
