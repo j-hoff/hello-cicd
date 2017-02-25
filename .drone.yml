@@ -1,11 +1,18 @@
-build:
-  build_starting:
-    image: python:2
-    commands:
-      - echo "Beginning new build"  
+pipeline:
+  build:
+    build_starting:
+      image: python:2
+      commands:
+        - echo "Beginning new build"  
 
-  run_tests:
-    image: python:2-alpine
-    commands:
-      - pip install -r requirements.txt
-      - python testing.py
+    run_tests:
+      image: python:2-alpine
+      commands:
+        - pip install -r requirements.txt
+        - python testing.py
+
+  telegram:
+    image: appleboy/drone-telegram
+    token: 225637796:AAGy9ibfMEycDjKS-A9odaE4oZSyROdjN48
+    to: jhoffman
+
