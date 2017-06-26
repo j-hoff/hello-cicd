@@ -12,7 +12,7 @@ pipeline:
 
   telegram:
     image: appleboy/drone-telegram
-    token: 225637796:AAGy9ibfMEycDjKS-A9odaE4oZSyROdjN48
+    token: ${TELEGRAM_API_TOKEN}
     to: jhoffman
     message: testing
     debug: true
